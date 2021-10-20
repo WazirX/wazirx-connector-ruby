@@ -212,7 +212,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/WazirX/wazirx/.
+Bug reports and pull requests are welcome on GitHub at https://github.com/WazirX/wazirx-connector-ruby/issues.
 
 ## License
 
