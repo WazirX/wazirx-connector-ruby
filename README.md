@@ -1,8 +1,8 @@
 # Wazirx
 
-[![Gem Version](https://badge.fury.io/rb/binance.svg)](https://badge.fury.io/rb/binance)
+[![version 1.0.0](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://wazirx.github.io/#public-rest-api-for-wazirx)
 
-This is an unofficial Ruby wrapper for the Wazirx exchange REST and WebSocket APIs.
+This is an official Ruby wrapper for the Wazirx exchange REST and WebSocket APIs.
 
 ##### Notice
 
