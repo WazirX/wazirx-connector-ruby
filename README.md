@@ -1,6 +1,6 @@
 # Wazirx
 
-[![version 1.0.0](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://wazirx.github.io/#public-rest-api-for-wazirx)
+[![Gem Version](https://img.shields.io/badge/gem%20version-1.0.0-brightgreen?style=flat&logo=rubygems)](https://wazirx.github.io/#public-rest-api-for-wazirx)
 
 This is an official Ruby wrapper for the Wazirx exchange REST and WebSocket APIs.
 
