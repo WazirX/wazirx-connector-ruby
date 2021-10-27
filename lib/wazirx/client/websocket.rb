@@ -7,7 +7,7 @@ module Wazirx
     # Public: Client with methods mirroring the Wazirx WebSocket API
     class WebSocket
       # Public: String base url for WebSocket client to use
-      BASE_URL = 'wss://stream-external.hellopye.com/stream'.freeze
+      BASE_URL = 'wss://stream.wazirx.com/stream'.freeze
       SUBSCRIBE = 'subscribe'
 
       def initialize(api_key='', secret_key='')

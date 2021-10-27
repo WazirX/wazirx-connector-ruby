@@ -9,7 +9,7 @@ require_relative 'rest/methods'
 module Wazirx
   module Client
     class REST
-      BASE_URL = 'https://api.hellopye.com'.freeze
+      BASE_URL = 'https://api.wazirx.com'.freeze
 
       def initialize(api_key: '', secret_key: '',
                      adapter: Faraday.default_adapter)
