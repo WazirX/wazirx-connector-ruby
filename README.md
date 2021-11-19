@@ -53,7 +53,7 @@ Require Wazirx:
 require 'wazirx'
 ```
 
-Create a new instance of the [REST Client](http://www.rubydoc.info/gems/wazirx):
+Create a new instance of the REST Client:
 
 ```ruby
 # If you only plan on touching public API endpoints, you can forgo any arguments
@@ -143,8 +143,9 @@ Response:
 "status"=>"wait", "price"=>"210.0", "origQty"=>"2.0", "executedQty"=>"0.0",
 "createdTime"=>1632310960000, "updatedTime"=>1632310960000}
 ```
+##### For other methods follow [this](https://github.com/WazirX/wazirx-connector-ruby/blob/master/lib/wazirx/client/rest/methods.rb).
 
-Required and optional parameters, as well as enum values, can currently be found on the [Wazirx GitHub Page](https://wazirx.github.io/#public-rest-api-for-wazirx). Parameters should always be passed to client methods as keyword arguments in snake_case form.
+Required and optional parameters, as well as enum values, can currently be found on the [Wazirx GitHub Page](https://docs.wazirx.com). Parameters should always be passed to client methods as keyword arguments in snake_case form.
 
 #### WebSocket Client
 
@@ -155,7 +156,7 @@ require 'wazirx'
 require 'eventmachine'
 ```
 
-Create a new instance of the [WebSocket Client](http://www.rubydoc.info/gems/wazirx):
+Create a new instance of the REST Client:
 
 ```ruby
 client = Wazirx::Client::WebSocket.new
@@ -185,14 +186,14 @@ end
 
 User data streams utilize both the REST and WebSocket APIs.
 
-Require Binance and [EventMachine](https://github.com/eventmachine/eventmachine):
+Require Wazirx and [EventMachine](https://github.com/eventmachine/eventmachine):
 
 ```ruby
 require 'wazirx'
 require 'eventmachine'
 ```
 
-Create a new instance of the [REST Client](http://www.rubydoc.info/gems/wazirx) and [WebSocket Client](http://www.rubydoc.info/gems/wazirx):
+Create a new instance of the REST Client and WebSocket Client:
 
 ```ruby
 ws    = Wazirx::Client::WebSocket.new api_key: 'x', secret_key: 'y'
