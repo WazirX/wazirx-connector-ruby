@@ -145,7 +145,7 @@ Response:
 ```
 ##### For other methods follow [this](https://github.com/WazirX/wazirx-connector-ruby/blob/master/lib/wazirx/client/rest/methods.rb).
 
-Required and optional parameters, as well as enum values, can currently be found on the [Wazirx GitHub Page](https://docs.wazirx.com). Parameters should always be passed to client methods as keyword arguments in snake_case form.
+Required and optional parameters, as well as enum values, can currently be found on the [Wazirx Documentation](https://docs.wazirx.com). Parameters should always be passed to client methods as keyword arguments in snake_case form.
 
 #### WebSocket Client
 
