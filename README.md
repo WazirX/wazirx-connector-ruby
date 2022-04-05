@@ -1,12 +1,12 @@
-# Wazirx
+# Wazirx Ruby
 
-[![Gem Version](https://img.shields.io/badge/gem%20version-1.0.0-brightgreen?style=flat&logo=rubygems)](https://wazirx.github.io/#public-rest-api-for-wazirx)
+[![Gem Version](https://img.shields.io/badge/gem%20version-1.0.0-brightgreen?style=flat&logo=rubygems)](https://docs.wazirx.com)
 
 This is an official Ruby wrapper for the Wazirx exchange REST and WebSocket APIs.
 
 ##### Notice
 
-We are now at 1.0 and there are breaking changes, mainly with some method names and the casing of keys. Be sure to check out the code while I work on better documentation.
+We are now at 1.0 and there may be things breaking, don't hesitate to raise an issue if you feel so!
 
 ## Installation
 
@@ -159,7 +159,10 @@ require 'eventmachine'
 Create a new instance of the REST Client:
 
 ```ruby
-client = Wazirx::Client::WebSocket.new
+# If you only plan on touching public API endpoints, you can forgo any arguments
+ws = Wazirx::Client::WebSocket.new
+# Otherwise provide an api_key and secret_key as keyword arguments
+ws = Wazirx::Client::WebSocket.new api_key: 'x', secret_key: 'y'
 ```
 
 Create various WebSocket streams, wrapping calls inside `EM.run`:
@@ -168,42 +171,29 @@ Create various WebSocket streams, wrapping calls inside `EM.run`:
 EM.run do
 
   # Pass the symbol/symbols to subscribe to trades
-  client.trades symbol: ['btcinr','wrxinr'], id: 0, action: 'subscribe'
+  ws.trades symbol: ['btcinr','wrxinr'], id: 0, action: 'subscribe'
 
   # Pass the symbol/symbols to subscribe to depth
-  client.depth symbol: ['btcinr','wrxinr'], id: 0, action: 'subscribe'
+  ws.depth symbol: ['btcinr','wrxinr'], id: 0, action: 'subscribe'
 
- # For all market tickers
- client.all_market_ticker id: 0, action: 'subscribe'
+  # For all market tickers
+  ws.all_market_ticker id: 0, action: 'subscribe'
 
 end
 ```
 ##### Note:
-* `symbol` can be `Array` for multiple symbols or `String` for single symbol.
+* `symbol` can be `Array` for multiple.
 * `id` by default is `0`, for unique identification any positive integer can be used.
 * `action` only needs to pass in case of `unsubscribe`, default is `subscribe` if no data passed.
 #### User Data Stream
 
 User data streams utilize both the REST and WebSocket APIs.
 
-Require Wazirx and [EventMachine](https://github.com/eventmachine/eventmachine):
-
-```ruby
-require 'wazirx'
-require 'eventmachine'
-```
-
-Create a new instance of the REST Client and WebSocket Client:
-
-```ruby
-ws    = Wazirx::Client::WebSocket.new api_key: 'x', secret_key: 'y'
-```
-
 Request a listen key from the REST API, and then create a WebSocket stream using it.
 
 ```ruby
 EM.run do
-  ws.user_stream streams: ['orderUpdate', 'ownTrade', 'outboundAccountPosition', id: 0, action: 'subscribe']
+  ws.user_stream streams: ['orderUpdate', 'ownTrade', 'outboundAccountPosition'], id: 0, action: 'subscribe'
 end
 ```
 
