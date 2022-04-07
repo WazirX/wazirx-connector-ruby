@@ -143,7 +143,7 @@ Response:
 "status"=>"wait", "price"=>"210.0", "origQty"=>"2.0", "executedQty"=>"0.0",
 "createdTime"=>1632310960000, "updatedTime"=>1632310960000}
 ```
-##### For other methods follow [this](https://github.com/WazirX/wazirx-connector-ruby/blob/master/lib/wazirx/client/rest/methods.rb).
+##### For other api methods follow [this](https://github.com/WazirX/wazirx-connector-ruby/blob/master/lib/wazirx/client/rest/methods.rb).
 
 Required and optional parameters, as well as enum values, can currently be found on the [Wazirx Documentation](https://docs.wazirx.com). Parameters should always be passed to client methods as keyword arguments in snake_case form.
 
@@ -196,6 +196,7 @@ EM.run do
   ws.user_stream streams: ['orderUpdate', 'ownTrade', 'outboundAccountPosition'], id: 0, action: 'subscribe'
 end
 ```
+##### For other websocket methods follow [this](https://github.com/WazirX/wazirx-connector-ruby/blob/master/lib/wazirx/client/websocket.rb).
 
 ## Development
 
