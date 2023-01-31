@@ -11,7 +11,7 @@ module Wazirx
           action: :get, endpoint: :time },
         # #system_status
         { name: :system_status, client: :public,
-          action: :get, endpoint: :time },
+          action: :get, endpoint: :system_status },
         # #exchange_info
         { name: :exchange_info, client: :public,
           action: :get, endpoint: :exchange_info },

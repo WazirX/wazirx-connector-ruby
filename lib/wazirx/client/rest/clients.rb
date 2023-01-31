@@ -4,7 +4,7 @@ module Wazirx
   module Client
     class REST
       def public_client(adapter)
-        Faraday.new(url: "#{BASE_URL}/uapi") do |conn|
+        Faraday.new(url: "#{BASE_URL}/sapi") do |conn|
           conn.request :multipart
           conn.request :url_encoded
           conn.response :json, content_type: /\bjson$/
@@ -13,7 +13,7 @@ module Wazirx
       end
 
       def signed_client(api_key, secret_key, adapter)
-        Faraday.new(url: "#{BASE_URL}/uapi") do |conn|
+        Faraday.new(url: "#{BASE_URL}/sapi") do |conn|
           conn.request :multipart
           conn.request :url_encoded
           conn.response :json, content_type: /\bjson$/
