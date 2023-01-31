@@ -1,12 +1,12 @@
 # Wazirx Ruby
 
-[![Gem Version](https://img.shields.io/badge/gem%20version-1.0.0-brightgreen?style=flat&logo=rubygems)](https://docs.wazirx.com)
+[![Gem Version](https://img.shields.io/badge/gem%20version-2.0.0-brightgreen?style=flat&logo=rubygems)](https://docs.wazirx.com)
 
 This is an official Ruby wrapper for the Wazirx exchange REST and WebSocket APIs.
 
 ##### Notice
 
-We are now at 1.0 and there may be things breaking, don't hesitate to raise an issue if you feel so!
+We are now at 2.0 and there may be things breaking, don't hesitate to raise an issue if you feel so!
 
 ## Installation
 Generate **API KEY** and **Secret Key** from Wazirx website [here](https://wazirx.com/settings/keys)
@@ -14,7 +14,7 @@ Generate **API KEY** and **Secret Key** from Wazirx website [here](https://wazir
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'wazirx'
+gem 'wazirx_official'
 ```
 
 And then execute:
@@ -23,7 +23,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install wazirx
+    $ gem install wazirx_official
 
 ## Features
 
@@ -51,7 +51,7 @@ Or install it yourself as:
 Require Wazirx:
 
 ```ruby
-require 'wazirx'
+require 'wazirx_official'
 ```
 
 Create a new instance of the REST Client:
@@ -153,7 +153,7 @@ Required and optional parameters, as well as enum values, can currently be found
 Require Wazirx and [EventMachine](https://github.com/eventmachine/eventmachine):
 
 ```ruby
-require 'wazirx'
+require 'wazirx_official'
 require 'eventmachine'
 ```
 
