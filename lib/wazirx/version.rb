@@ -1,3 +1,3 @@
 module Wazirx
-  VERSION = '1.0.0'.freeze
+  VERSION = '1.0.5'.freeze
 end
