@@ -3,13 +3,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'wazirx/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'wazirx'
+  spec.name          = 'wazirx_official'
   spec.version       = Wazirx::VERSION
-  spec.authors       = ['Dibyajit']
+  spec.authors       = ['Som Prabh Sharma']
   spec.email         = ['api@wazirx.com']
 
   spec.summary       = 'API Wrapper for the Wazirx cryptocurrency exchange.'
-  spec.homepage      = 'https://github.com/WazirX/sapi/'
+  spec.homepage      = 'https://github.com/WazirX/wazirx-connector-ruby'
   spec.license       = 'MIT'
 
   spec.files         = Dir['bin/*'] +
