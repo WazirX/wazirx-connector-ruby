@@ -1,12 +1,12 @@
 # Wazirx Ruby
 
-[![Gem Version](https://img.shields.io/badge/gem%20version-2.0.0-brightgreen?style=flat&logo=rubygems)](https://docs.wazirx.com)
+[![Gem Version](https://img.shields.io/badge/gem%20version-2.0.1-brightgreen?style=flat&logo=rubygems)](https://docs.wazirx.com)
 
 This is an official Ruby wrapper for the Wazirx exchange REST and WebSocket APIs.
 
 ##### Notice
 
-We are now at 2.0 and there may be things breaking, don't hesitate to raise an issue if you feel so!
+We are now at 2.0.1 and there may be things breaking, don't hesitate to raise an issue if you feel so!
 
 ## Installation
 Generate **API KEY** and **Secret Key** from Wazirx website [here](https://wazirx.com/settings/keys)
