@@ -21,7 +21,7 @@ module Wazirx
       end
 
       def all_market_ticker(id: 0,action:SUBSCRIBE)
-        stream = "!ticker@arr"
+        stream = ["!ticker@arr"]
         create_stream(streams: stream, id: id, action: action)
       end
 
@@ -73,7 +73,7 @@ module Wazirx
         @ws.send(JSON.dump({'event':'unsubscribe', 'streams':streams.flatten,'id':id}))
       end
 
-      def create_stream(streams: streams, id: id, action: action, auth_key:'')
+      def create_stream(streams:, id:, action:, auth_key:'')
         @ws = Faye::WebSocket::Client.new(BASE_URL)
         @ws.on :open do |event|
           puts [:open]
